@@ -8,13 +8,15 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 
 const routes: Routes = [
+
+  { path: '', redirectTo: '/departments', pathMatch : 'full' },
+
   {
-    path: '', component: DepartmentListComponent
+    path: 'departments', component: DepartmentListComponent
 
   },
-  { path: 'departments', redirectTo: '' },
 
-  { path: 'employees', component: EmployeeListComponent },
+{ path: 'employees', component: EmployeeListComponent },
 
   { path: '**', component: PageNotFoundComponent }
 ];
